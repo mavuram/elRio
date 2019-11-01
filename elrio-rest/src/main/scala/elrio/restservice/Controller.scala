@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation._
 @RequestMapping(path = Array("/api"))
 class Controller(@Autowired val service: Service) {
   @GetMapping(path = Array("/feeds"))
-  def getFeeds(): Iterable[FeedCfg] = {
-    service.listFeeds
+  def getFeeds: Iterable[FeedCfg] = {
+    service.listFeeds()
   }
   @GetMapping(path = Array("/feeds/{id}"))
   def getFeed(@PathVariable feedId: String): FeedCfg = {

@@ -11,7 +11,7 @@ import scala.collection.JavaConverters._
 
 @Repository
 class FeedFileRepository extends repository.Repository[FeedCfg, String]{
-    def save(feedCfg: FeedCfg) = {
+    def save(feedCfg: FeedCfg) : Unit = {
     }
 
   def findByIdo(feedId: String): Option[FeedCfg] = {
@@ -23,7 +23,7 @@ class FeedFileRepository extends repository.Repository[FeedCfg, String]{
 //  }
 //
   def findAll: lang.Iterable[FeedCfg] = {
-    CfgLoder.load().toIterable.asJava
+    CfgLoder.load().asJava
   }
 //
 //  override def save[S <: FeedCfg](s: S): S = {
