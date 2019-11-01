@@ -1,0 +1,13 @@
+{
+  "source" : {
+    "source_type": "file",
+    "path": "c:\\data\\emp.txt",
+    "format": {
+      "format_type": "fixed_size",
+      "columns": [
+        {"name":"id",  "size":"15"},
+        {"name":"sal", "size":"8"}
+      ]
+    }
+  }
+}

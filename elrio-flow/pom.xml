@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>elrio-core</artifactId>
+        <groupId>com.cloudpath.elrio</groupId>
+        <version>1.0-SNAPSHOTnubes</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>elrio-flow</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.cloudpath.elrio</groupId>
+            <artifactId>elrio-common</artifactId>
+            <version>1.0-SNAPSHOTnubes</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cloudpath.elrio</groupId>
+            <artifactId>elrio-rest</artifactId>
+            <version>1.0-SNAPSHOTnubes</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <!--<version>2.9.4</version>-->
+            <version>2.6.5</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

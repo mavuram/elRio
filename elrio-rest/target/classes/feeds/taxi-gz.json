@@ -1,0 +1,29 @@
+{
+  "name": "ny_taxi-gz",
+  "source" : {
+    "source_type": "file",
+    "path": "c:\\data\\ny_taxi_2019-01.csv.gz",
+    "format": {
+      "format_type": "fixed_size",
+      "columns": [
+        {"name":"id",  "size":"15"},
+        {"name":"sal", "size":"8"}
+      ]
+    }
+  },
+  "projections": [
+    {
+      "columns": [],
+      "target": {
+        "path": "c:\\data\\out\\ny_taxi_gz.parquet"
+      }
+    },
+    {
+      "columns": ["VendorID", "tpep_pickup_datetime", "tpep_dropoff_datetime", "payment_type", "total_amount"],
+      "target": {
+        "path": "c:\\data\\out\\ny_taxi_gz-less.parquet",
+        "partition": "payment_type"
+      }
+    }
+  ]
+}
