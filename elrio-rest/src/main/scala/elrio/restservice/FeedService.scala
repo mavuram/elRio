@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype
 
 @stereotype.Service
-class Service(@Autowired private val repository: FeedFileRepository) {
+class FeedService(@Autowired private val repository: FeedFileRepository) {
   def listFeeds(): lang.Iterable[FeedCfg] = {
     repository.findAll
   }

@@ -1,0 +1,22 @@
+{
+  "rule_id": 100001,
+  "message": "xyz should in between 'foo' and 'bar' or it should be 'baz'",
+  "severity": "WARNING",
+  "rule":
+  {
+    "op":"OR",
+    "lrule":
+    {
+      "op":"INXTo",
+      "operand": "xyz",
+      "from":"Foo",
+      "to":"Bar"
+    },
+    "rrule":
+    {
+      "op":"GTE",
+      "operand": "xyz",
+      "val":"Baz"
+    }
+  }
+}

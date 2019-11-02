@@ -11,7 +11,7 @@ object ElRioMain {
     val conf = new SparkConf().setAppName("Read CSV File").setMaster("local")
     val ss = SparkSession.builder().config(conf).getOrCreate()
 
-    val feeds = CfgLoder.load().map(cfg => new Feed(cfg, ss))
+    val feeds = CfgLoder.loadFeeds().map(cfg => new Feed(cfg, ss))
     feeds.foreach(feed => Feed.queue(feed))
   }
 }
