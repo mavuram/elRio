@@ -1,2 +1,2 @@
 # elRio
-elRio is a data lake platform
+elRio a config driven ELT data lake platform with validations, violation triage and enrichment pipe-line
