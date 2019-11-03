@@ -5,9 +5,8 @@ import java.io.File
 import com.fasterxml.jackson.databind.ObjectMapper
 import elrio.cfg.{FeedCfg, Rule}
 
-object CfgLoder extends App {
+object CfgLoader extends App {
   //TODO: make this generic
-
   def loadRules(): List[Rule] = {
     val rulesPath = getClass.getResource("/rules").getPath
     val rulesDir = new File(rulesPath)

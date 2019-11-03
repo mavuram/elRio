@@ -2,7 +2,7 @@ package elrio.restservice
 
 import java.lang
 
-import elrio.CfgLoder
+import elrio.CfgLoader
 import elrio.cfg.FeedCfg
 import org.springframework.data.repository
 import org.springframework.stereotype.Repository
@@ -15,9 +15,9 @@ class FeedFileRepository extends repository.Repository[FeedCfg, String]{
     }
 
   def findByIdo(feedId: String): Option[FeedCfg] = {
-    CfgLoder.loadFeed(feedId)
+    CfgLoader.loadFeed(feedId)
   }
   def findAll: lang.Iterable[FeedCfg] = {
-    CfgLoder.loadFeeds().asJava
+    CfgLoader.loadFeeds().asJava
   }
 }

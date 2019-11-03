@@ -16,11 +16,6 @@
             <artifactId>elrio-common</artifactId>
             <version>1.0-SNAPSHOTnubes</version>
         </dependency>
-        <dependency>
-            <groupId>com.cloudpath.elrio</groupId>
-            <artifactId>elrio-common</artifactId>
-            <version>1.0-SNAPSHOTnubes</version>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>

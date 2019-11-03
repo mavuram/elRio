@@ -8,10 +8,10 @@ object ElRioMain {
   //TODO: handle exceptions
 
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("Read CSV File").setMaster("local")
+    val conf = new SparkConf().setAppName("elRio Processing").setMaster("local")
     val ss = SparkSession.builder().config(conf).getOrCreate()
 
-    val feeds = CfgLoder.loadFeeds().map(cfg => new Feed(cfg, ss))
+    val feeds = CfgLoader.loadFeeds().map(cfg => new Feed(cfg, ss))
     feeds.foreach(feed => Feed.queue(feed))
   }
 }

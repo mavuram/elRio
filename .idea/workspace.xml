@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ff86593-4915-452e-a60e-34f245ac0a20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Violations.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleController.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleService.scala" afterDir="false" />
+    <list default="true" id="8ff86593-4915-452e-a60e-34f245ac0a20" name="Default Changelist" comment="code for processing validation">
+      <change afterPath="$PROJECT_DIR$/elrio-common/src/test/scala/elrio/cfg/ValidationSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/engine/Validator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/elrio-flow/src/test/scala/elrio/engine/RowValidatorSpec.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-flow/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-flow/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/Controller.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-rest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoader.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedFileRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedFileRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/Service.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedService.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elrio-rest/src/test/scala/elrio/cfg/DataValidationCfgTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/test/scala/elrio/cfg/DataValidationCfgTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,85 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <element signature="e#15#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="1144" selection-start-line="1144" selection-end-line="1144" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar!/com/fasterxml/jackson/core/JsonFactory.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="278" selection-start-line="278" selection-end-line="278" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-              <folding>
-                <element signature="e#27#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.0.RELEASE/spring-core-5.2.0.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleController.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#27#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleService.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <element signature="e#27#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -122,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="e#19#86#0" expanded="true" />
               </folding>
@@ -131,10 +52,76 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FormatCfg.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/PackageValidationCfg.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ProjectionCfg.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+              <folding>
+                <element signature="e#151#246#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/test/scala/elrio/cfg/ValidationSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/SourceCfg.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TargetCfg.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TransformationCfg.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -157,12 +144,29 @@
       <find>&quot;rules&quot;:[</find>
       <find>size</find>
       <find>jackson</find>
+      <find>schema</find>
+      <find>SimpleRuleValidation</find>
+      <find>a: Comparable[T], b: T</find>
+      <find>rest</find>
+      <find>elrio</find>
+      <find>elrio-</find>
+      <find>StructType</find>
+      <find>Row(</find>
+      <find>val</find>
+      <find>_1</find>
+      <find>columnGetterFunction</find>
+      <find>CompositeRuleValidation</find>
+      <find>eval</find>
+      <find>11</find>
+      <find>println</find>
+      <find>impli</find>
     </findStrings>
     <replaceStrings>
       <replace>String)</replace>
       <replace>&quot;</replace>
       <replace>operand</replace>
       <replace>obj</replace>
+      <replace>a: String, b: String</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Vishnu\IdeaProjects\elRioCore</dir>
@@ -174,11 +178,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala" />
         <option value="$PROJECT_DIR$/elrio-ui/pom.xml" />
-        <option value="$PROJECT_DIR$/elrio-flow/pom.xml" />
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/SwaggerCnfig.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/elrio-common/src/test/scala/elrio/cfg/DataValidationCfgTest.scala" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -188,18 +189,25 @@
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/Service.scala" />
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedService.scala" />
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedFileRepository.scala" />
-        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala" />
-        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleService.scala" />
         <option value="$PROJECT_DIR$/elrio-rest/src/test/scala/elrio/cfg/DataValidationCfgTest.scala" />
-        <option value="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala" />
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedController.scala" />
-        <option value="$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json" />
-        <option value="$PROJECT_DIR$/elrio-rest/pom.xml" />
         <option value="$PROJECT_DIR$/elrio-common/pom.xml" />
-        <option value="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala" />
-        <option value="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala" />
-        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala" />
         <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleController.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala" />
+        <option value="$PROJECT_DIR$/elrio-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala" />
+        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleService.scala" />
+        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala" />
+        <option value="$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala" />
+        <option value="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala" />
+        <option value="$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json" />
+        <option value="$PROJECT_DIR$/elrio-flow/pom.xml" />
+        <option value="$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala" />
+        <option value="$PROJECT_DIR$/elrio-flow/src/test/scala/elrio/engine/ValidatorSpec.scala" />
+        <option value="$PROJECT_DIR$/elrio-flow/src/test/scala/elrio/engine/RowValidatorSpec.scala" />
+        <option value="$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/engine/Validator.scala" />
+        <option value="$PROJECT_DIR$/elrio-common/src/test/scala/elrio/cfg/ValidationSpec.scala" />
       </list>
     </option>
   </component>
@@ -245,7 +253,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,7 +283,14 @@
               <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
               <item name="elrio-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -284,7 +298,7 @@
               <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
               <item name="elrio-common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="cfg" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -305,6 +319,57 @@
               <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-flow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
@@ -331,6 +396,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elRioCore" type="462c0819:PsiDirectoryNode" />
+              <item name="elrio-rest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="rules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="elRioCore" type="b2602c69:ProjectViewProjectNode" />
@@ -388,10 +462,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572669923212" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572741148054" />
     <property name="last_opened_file_path" value="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -416,88 +491,102 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="elrio.restservice.Application" />
-      <module name="elrio-rest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elrio.restservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CfgLoder" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="elrio.CfgLoder" />
-      <module name="elrio-rest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elrio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ElRioMain" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="elrio.ElRioMain" />
+  <component name="RunManager" selected="ScalaTest.ValidationSpec.validation logic validator should return correct results for in family of conditions&#10;validation logic validator should return correct results for logical operators">
+    <configuration name="RowValidatorSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <module name="elrio-flow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elrio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataValidationCfgTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="elrio-rest" />
-      <setting name="path" value="elrio.cfg.DataValidationCfgTest" />
+      <setting name="path" value="elrio.engine.RowValidatorSpec" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-ui" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-common" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
       <setting name="useUiWithSbt" value="false" />
       <envs />
       <setting name="testKind" value="Class" />
-      <setting name="path" value="elrio.cfg.DataValidationCfgTest" />
+      <setting name="path" value="elrio.engine.RowValidatorSpec" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataValidationCfgTest.json parser should parse valid object for empty&#10;json parser should parse valid object for simple rule&#10;json parser should parse valid object for composite rule" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <module name="elrio-rest" />
-      <setting name="path" value="elrio.cfg.DataValidationCfgTest" />
+    <configuration name="ValidationSpec.validation logic validator should load rules properly when we create a validator" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="elrio-common" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-ui" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-common" />
       <setting name="searchForTest" value="Across module dependencies" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
       <setting name="useUiWithSbt" value="false" />
       <envs />
       <setting name="testKind" value="Test name" />
-      <setting name="path" value="elrio.cfg.DataValidationCfgTest" />
-      <setting name="testName" value="json parser should parse valid object for empty&#10;json parser should parse valid object for simple rule&#10;json parser should parse valid object for composite rule" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
+      <setting name="testName" value="validation logic validator should load rules properly when we create a validator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationSpec.validation logic validator should return correct results for in family of conditions&#10;validation logic validator should return correct results for logical operators" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="elrio-common" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-common" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Test name" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
+      <setting name="testName" value="validation logic validator should return correct results for in family of conditions&#10;validation logic validator should return correct results for logical operators" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidationSpec.validation logic validator should return correct results for logical operators" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="elrio-common" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-common" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Test name" />
+      <setting name="path" value="elrio.cfg.ValidationSpec" />
+      <setting name="testName" value="validation logic validator should return correct results for logical operators" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidatorSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="elrio-flow" />
+      <setting name="path" value="elrio.engine.ValidatorSpec" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$/elrio-flow" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Class" />
+      <setting name="path" value="elrio.engine.ValidatorSpec" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
-        <item itemvalue="Application.CfgLoder" />
-        <item itemvalue="ScalaTest.DataValidationCfgTest" />
-        <item itemvalue="Application.ElRioMain" />
-        <item itemvalue="ScalaTest.DataValidationCfgTest.json parser should parse valid object for empty&#10;json parser should parse valid object for simple rule&#10;json parser should parse valid object for composite rule" />
+        <item itemvalue="ScalaTest.ValidationSpec.validation logic validator should return correct results for in family of conditions&#10;validation logic validator should return correct results for logical operators" />
+        <item itemvalue="ScalaTest.RowValidatorSpec" />
+        <item itemvalue="ScalaTest.ValidationSpec.validation logic validator should return correct results for logical operators" />
+        <item itemvalue="ScalaTest.ValidationSpec.validation logic validator should load rules properly when we create a validator" />
+        <item itemvalue="ScalaTest.ValidatorSpec" />
       </list>
     </recent_temporary>
   </component>
@@ -547,39 +636,60 @@
       <option name="project" value="LOCAL" />
       <updated>1572629477176</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding validation rules">
+      <created>1572670092492</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572670092492</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update readme">
+      <created>1572670538310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572670538310</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update readme">
+      <created>1572671291879</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572671291879</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 12h 48m 04s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 18h 51m 19s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 12h 48m 19s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 18h 52m 31s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 13h 14m 20s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 18h 57m 06s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 13h 15m 04s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 19h 00m 45s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 13h 16m 18s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 19h 03m 04s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 13h 21m 31s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 19h 09m 24s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 23h 06m 19s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 19h 44m 27s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 23h 06m 40s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 20h 28m 24s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 23h 06m 54s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 20h 29m 09s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="DataValidationCfgTest - 2019.11.01 at 23h 15m 45s.xml">
-      <configuration name="DataValidationCfgTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="RowValidatorSpec - 2019.11.02 at 20h 30m 20s.xml">
+      <configuration name="RowValidatorSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -593,8 +703,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18459658" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18704157" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -603,9 +714,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32922733" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.22956327" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.43896976" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.54535276" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32922733" />
@@ -625,9 +736,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding readme" />
-    <MESSAGE value="adding validation rules" />
     <MESSAGE value="removing target directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing target directories" />
+    <MESSAGE value="adding validation rules" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="code for processing validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="code for processing validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,16 +759,22 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala</url>
-          <line>11</line>
+          <url>file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoader.scala</url>
+          <line>10</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala</url>
-          <line>22</line>
+          <url>file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoader.scala</url>
+          <line>21</line>
           <properties />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/elrio-flow/src/test/scala/elrio/engine/RowValidatorSpec.scala</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -702,83 +821,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/elrio-ui/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-scala_2.11/2.6.7.1/jackson-module-scala_2.11-2.6.7.1.jar!/com/fasterxml/jackson/module/scala/experimental/ScalaObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.4/spark-core_2.11-2.4.4.jar!/org/apache/spark/util/Utils.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#15#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.0.RELEASE/spring-core-5.2.0.RELEASE.jar!/org/springframework/util/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-flow/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/SwaggerCnfig.scala" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.0.RELEASE/spring-boot-2.2.0.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="534" selection-start-line="534" selection-end-line="534" />
-          <folding>
-            <element signature="e#4949#4950#0" expanded="true" />
-            <element signature="e#5007#5008#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.0.RELEASE/spring-core-5.2.0.RELEASE.jar!/org/springframework/util/StopWatch.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.0.RELEASE/spring-boot-2.2.0.RELEASE.jar!/org/springframework/boot/WebApplicationType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.0.RELEASE/spring-core-5.2.0.RELEASE.jar!/org/springframework/util/ClassUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -790,13 +832,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationCfg.scala" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.1.jar!/scala/package.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -826,59 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FormatCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/PackageValidationCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ProjectionCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TargetCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TransformationCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/SourceCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Violations.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -903,27 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/FeedController.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/src/test/scala/elrio/cfg/DataValidationCfgTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="41" column="73" selection-start-line="40" selection-start-column="9" selection-end-line="41" selection-end-column="73" />
-          <folding>
-            <element signature="e#19#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/sources/Source.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -948,44 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#151#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.jar!/com/fasterxml/jackson/databind/exc/InvalidDefinitionException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#19#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1010,30 +938,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.11/2.4.4/spark-catalyst_2.11-2.4.4.jar!/org/apache/spark/sql/types/StructField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-rest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="13" selection-start-line="13" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Feed.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#15#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#27#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoder.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#15#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
             <element signature="e#27#43#0" expanded="true" />
           </folding>
@@ -1042,11 +981,196 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="302">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
             <element signature="e#27#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/restservice/RuleFileRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#27#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-rest/src/test/scala/elrio/cfg/DataValidationCfgTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#19#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.11/2.4.4/spark-catalyst_2.11-2.4.4.jar!/org/apache/spark/sql/catalyst/encoders/ExpressionEncoder.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/ElRioMain.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="10" selection-end-line="12" />
+          <folding>
+            <element signature="e#15#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.11/2.4.4/spark-catalyst_2.11-2.4.4.jar!/org/apache/spark/sql/catalyst/expressions/GenericRowWithSchema.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/Violations.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.4.4/spark-sql_2.11-2.4.4.jar!/org/apache/spark/sql/Dataset.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/3.0.0/scalatest_2.11-3.0.0.jar!/org/scalatest/OutcomeOf.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/3.0.0/scalatest_2.11-3.0.0.jar!/org/scalatest/Suite.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/3.0.0/scalatest_2.11-3.0.0.jar!/org/scalatest/tools/SuiteRunner.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/resources/rules/100001.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/3.0.0/scalatest_2.11-3.0.0.jar!/org/scalatest/SuperEngine.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/3.0.0/scalatest_2.11-3.0.0.jar!/org/scalatest/tools/Runner.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/src/test/scala/elrio/engine/RowValidatorSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-flow/src/main/scala/elrio/engine/Validator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#22#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-rest/src/main/scala/elrio/CfgLoader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#15#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/DataValidationCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FeedCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="e#19#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/FormatCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/PackageValidationCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ProjectionCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/SourceCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TargetCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/TransformationCfg.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/main/scala/elrio/cfg/ValidationRule.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+          <folding>
+            <element signature="e#151#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elrio-common/src/test/scala/elrio/cfg/ValidationSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1103,7 +1227,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>elrio-rest</last-edited>
+          <last-edited>elrio-common</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

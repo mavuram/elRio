@@ -22,7 +22,7 @@ class Feed(cfg: FeedCfg, sparkSession: SparkSession) {
     if (cfg.projections != null) {
       cfg.projections.foreach(proj => {
 
-        val dfw = if (proj.columns == null || proj.columns.size == 0) df
+        val dfw = if (proj.columns == null || proj.columns.length == 0) df
         else df.select(proj.columns.map(c => col(c)): _*)
         val dfm = dfw.write.mode(SaveMode.Overwrite)
         if (proj.target.partition != null)
@@ -38,7 +38,7 @@ class Feed(cfg: FeedCfg, sparkSession: SparkSession) {
 
   def validate(df: DataFrame, validationCfg: DataValidationCfg): (DataFrame, DataFrame) = {
     //TODO: impleent this
-    if (validationCfg.ruleIds == null || validationCfg.ruleIds.size == 0)
+    if (validationCfg.ruleIds == null || validationCfg.ruleIds.length == 0)
       (df, null)
     else
       (null, null)

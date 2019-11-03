@@ -2,7 +2,7 @@ package elrio.restservice
 
 import java.lang
 
-import elrio.CfgLoder
+import elrio.CfgLoader
 import elrio.cfg.Rule
 import org.springframework.data.repository
 import org.springframework.stereotype.Repository
@@ -15,9 +15,9 @@ class RuleFileRepository extends repository.Repository[Rule, Int]{
     }
 
   def findByIdo(ruleId: Int): Option[Rule] = {
-    CfgLoder.loadRule(ruleId)
+    CfgLoader.loadRule(ruleId)
   }
   def findAll: lang.Iterable[Rule] = {
-    CfgLoder.loadRules().asJava
+    CfgLoader.loadRules().asJava
   }
 }
